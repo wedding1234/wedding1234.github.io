@@ -1,0 +1,100 @@
+/*----------------------------------*\
+	# animation                    
+\*----------------------------------*/
+@keyframes reveal-right {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes reveal-left {
+  from {
+    clip-path: inset(0 0 0 100%);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    clip-path: inset(100% 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes reveal-down {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0}
+  to {opacity: 1}
+}
+
+/*----------------------------------*\ 
+  # seo          
+\*----------------------------------*/
+.seo {  
+  font-size:var(--small); 
+  max-height: 0; 
+  overflow: hidden;
+}
+
+/*----------------------------------*\
+	# back to top                     
+\*----------------------------------*/
+.cd-top {z-index: 30;
+	cursor: pointer;
+	display: inline-block;
+	height: 3.5em;
+	width: 3.5em;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 5.5em;
+	right: .5em;
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+	      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);  
+	overflow: hidden;
+	text-indent: 100%;
+	weak-space: nowrap;	
+	background: rgba(0, 0, 0, 0.5) url(../images/go-top.svg)no-repeat center center/50% auto; 
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s;
+	transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s;
+}
+.cd-top.cd-top--show,
+.cd-top.cd-top--fade-out,
+.cd-top:hover {
+	-webkit-transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
+	transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
+}
+.cd-top.cd-top--show {  
+	visibility: visible;
+	opacity: 1;
+}
+.cd-top.cd-top--fade-out {  
+	opacity: .5;
+}
+.cd-top:hover {
+	background-color: var(--main);
+	opacity: 1;
+}
+@media (max-width: 541px) {
+	.cd-top {	
+		height: 50px;
+		width: 50px;	
+		bottom: 20px;	
+	}
+}

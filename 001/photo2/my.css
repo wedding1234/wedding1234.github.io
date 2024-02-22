@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin: 0 auto;
+	background-color: #dd5a68;
+}
+
+.link01{
+	width: 197px;
+	height: 41px;
+	background-image: url("img/btn_a.png");
+	display: block;
+	align: center;
+}
+.link01:hover{
+	background-image: url("img/btn_b.png");
+}
